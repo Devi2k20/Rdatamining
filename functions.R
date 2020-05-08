@@ -12,7 +12,9 @@ above<- function(x ,n){
 
 columnmean<-function(x, removeNA= TRUE){
   nc<-ncol(x)
+  print(show(nc))
   means<-numeric(nc)
+ print(typeof(means)) 
   for(i in 1:nc){
     means[i]<-mean(x[, i], na.rm = removeNA)
   }
